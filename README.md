@@ -16,7 +16,13 @@ cd ~/.dotfiles
 stow --dotfiles zsh
 ```
 
-### removing individual configs
+### symlinking multiple configs
+
+```bash
+stow --dotfiles zsh git
+```
+
+### removing symlinked configs
 
 ```bash
 stow --dotfiles --delete zsh
