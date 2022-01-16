@@ -6,9 +6,7 @@ Config files, managed by the [GNU Stow](https://www.gnu.org/software/stow/) syml
 
 ```bash
 git clone https://github.com/jon-codes/.dotfiles.git ~/.dotfiles
-```
 
-```bash
 cd ~/.dotfiles
 ```
 
