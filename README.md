@@ -8,6 +8,8 @@ Config files, managed by the [GNU Stow](https://www.gnu.org/software/stow/) syml
 git clone https://github.com/jon-codes/.dotfiles.git ~/.dotfiles
 
 cd ~/.dotfiles
+
+git submodule update --init --recursive
 ```
 
 ### symlinking individual configs
