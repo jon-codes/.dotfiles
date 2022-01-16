@@ -1,7 +1,7 @@
 [commit]
     gpgsign = true
 [core]
-	excludesFile = ~/.config/.gitignore
+	excludesFile = ~/.config/ignore
 [credential "https://github.com"]
     helper = !/usr/bin/gh auth git-credential
 [init]

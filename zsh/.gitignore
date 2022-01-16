@@ -1,0 +1,9 @@
+*
+!.gitignore
+
+!.zshenv
+!.config/zsh/.zshrc
+!.config/zsh/zsh-autosuggestions
+!.config/zsh/zsh-completions
+!.config/zsh/zsh-syntax-highlighting
+!.config/zsh/zsh-defer
