@@ -1,0 +1,12 @@
+[commit]
+    gpgsign = true
+[core]
+	excludesFile = ~/.config/.gitignore
+[credential "https://github.com"]
+    helper = !/usr/bin/gh auth git-credential
+[init]
+    defaultBranch = main
+[user]
+    name = Jon Webb
+    email = jon@jonwebb.dev
+

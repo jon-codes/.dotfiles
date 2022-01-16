@@ -1,0 +1,17 @@
+# Node
+node_modules/
+npm-debug.log
+
+# Mac
+.DS_Store
+
+# Windows (lol)
+Thumbs.db
+
+# JetBrains
+.idea/
+
+# General
+log/
+*.log
+
