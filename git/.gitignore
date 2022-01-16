@@ -3,3 +3,5 @@
 
 !.config/git/config
 !.config/git/gitignore
+
+!*/
