@@ -4,7 +4,8 @@ autoload -U colors && colors
 HISTFILE=$ZDOTDIR/.zhistory
 HISTSIZE=10000
 SAVEHIST=10000
-setopt histignoredups
+setopt hist_ignore_dups
+setopt inc_append_history
 
 # completion
 autoload -U compinit
