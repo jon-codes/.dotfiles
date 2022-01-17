@@ -15,18 +15,18 @@ git submodule update --init --recursive
 ### symlinking individual configs
 
 ```bash
-stow --dotfiles zsh
+stows zsh
 ```
 
 ### symlinking multiple configs
 
 ```bash
-stow --dotfiles zsh git
+stow zsh git
 ```
 
 ### removing symlinked configs
 
 ```bash
-stow --dotfiles --delete zsh
+stow --delete zsh
 ```
 
