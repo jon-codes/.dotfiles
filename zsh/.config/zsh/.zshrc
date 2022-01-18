@@ -1,4 +1,5 @@
 autoload -Uz colors && colors
+autoload -Uz add-zsh-hook
 
 # history
 HISTFILE=$ZDOTDIR/.zhistory
@@ -15,7 +16,7 @@ compinit
 
 # git
 autoload -Uz vcs_info
-precmd() { vcs_info }
+add-zsh-hook precmd vcs_info
 
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
@@ -38,6 +39,13 @@ local prompt_dir_part='%F{yellow}%2~%f'
 
 PROMPT="${prompt_id_part}:${prompt_dir_part} %# "
 RPROMPT='${vcs_info_msg_0_}'
+
+# set title
+set_title() {
+    print -Pn "\e]0;%~\a"
+}
+
+add-zsh-hook precmd set_title
 
 # plugins
 source $ZDOTDIR/zsh-completions/zsh-completions.plugin.zsh
