@@ -1,0 +1,6 @@
+*
+!.gitignore
+
+!.config/alacritty/alacritty.yml
+
+!*/
