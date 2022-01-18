@@ -29,4 +29,3 @@ stow zsh git
 ```bash
 stow --delete zsh
 ```
-

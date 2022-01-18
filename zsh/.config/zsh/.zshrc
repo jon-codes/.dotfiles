@@ -1,14 +1,15 @@
-autoload -U colors && colors
+autoload -Uz colors && colors
 
 # history
 HISTFILE=$ZDOTDIR/.zhistory
 HISTSIZE=10000
 SAVEHIST=10000
+
 setopt hist_ignore_dups
 setopt inc_append_history
 
 # completion
-autoload -U compinit
+autoload -Uz compinit
 zmodload zsh/complist
 compinit
 
@@ -32,11 +33,10 @@ zstyle ':vcs_info:git:*' formats '%F{white}(%s:%f%F{magenta}%b%f%F{red}%u%c%m%f%
 # prompt
 setopt prompt_subst
 
-local prompt_id='%F{green}%n@%m%f'
-local prompt_dir='%F{yellow}%3~%f'
+local prompt_id_part='%F{green}%n@%m%f'
+local prompt_dir_part='%F{yellow}%2~%f'
 
-PROMPT="${prompt_id}:${prompt_dir} %# "
-
+PROMPT="${prompt_id_part}:${prompt_dir_part} %# "
 RPROMPT='${vcs_info_msg_0_}'
 
 # plugins
