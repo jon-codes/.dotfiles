@@ -53,10 +53,34 @@ source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 # aliases
-alias ls="ls -av --group-directories-first --color=auto"
+if [[ `uname` == "Darwin" ]]; then
+    alias ls="ls -av --color=auto"
+else
+    alias ls="ls -av --group-directories-first --color=auto"
+fi
 
 alias vi="nvim"
 alias vim="nvim"
+
+# start macos specific
+
+# homebrew
+path+=/opt/homebrew/bin
+
+# postgres
+path+=/Applications/Postgres.app/Contents/Versions/latest/bin
+
+# heroku
+export HEROKU_APP=go-grayscale-staging
+
+# gpg
+export GPG_TTY=$(tty)
+
+# mime types
+export FREEDESKTOP_MIME_TYPES_PATH="$(brew --prefix)/share/mime/packages/freedesktop.org.xml"
+
+# ruby
+eval "$(rbenv init - zsh)"
 
 # fnm
 path+=$HOME/.fnm
