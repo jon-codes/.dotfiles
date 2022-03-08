@@ -23,7 +23,7 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '!'
 zstyle ':vcs_info:*' stagedstr '+'
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-zstyle ':vcs_info:git:*' formats '%F{white}(%s:%f%F{magenta}%b%f%F{red}%u%c%m%f%F{white})%f'
+zstyle ':vcs_info:git:*' formats '%F{white}(%s:%f%F{magenta}%B%b%f%F{red}%u%c%m%f%%b%F{white})%f'
 
 +vi-git-untracked() {
     if [[ -n "$(git ls-files --others --exclude-standard)" ]]; then
@@ -37,12 +37,12 @@ setopt prompt_subst
 local prompt_id_part='%F{green}%n@%m%f'
 local prompt_dir_part='%F{yellow}%2~%f'
 
-PROMPT="${prompt_id_part}:${prompt_dir_part} %# "
+PROMPT="%B${prompt_id_part}:${prompt_dir_part}%b %# "
 RPROMPT='${vcs_info_msg_0_}'
 
 # set title
 set_title() {
-    print -Pn "\e]0;%~\a"
+    print -Pn "\e]0;%n@%m:%~\a"
 }
 
 add-zsh-hook precmd set_title
@@ -59,29 +59,10 @@ else
     alias ls="ls -av --group-directories-first --color=auto"
 fi
 
-alias vi="nvim"
-alias vim="nvim"
+# vim/nvim
+alias vi="vim"
 
-# start macos specific
-
-# homebrew
-path+=/opt/homebrew/bin
-
-# postgres
-path+=/Applications/Postgres.app/Contents/Versions/latest/bin
-
-# heroku
-export HEROKU_APP=go-grayscale-staging
-
-# gpg
-export GPG_TTY=$(tty)
-
-# mime types
-export FREEDESKTOP_MIME_TYPES_PATH="$(brew --prefix)/share/mime/packages/freedesktop.org.xml"
-
-# ruby
-eval "$(rbenv init - zsh)"
-
-# fnm
-path+=$HOME/.fnm
-eval "`fnm env`"
+if type "$nvim" > /dev/null; then
+  echo "NOT INSTALLED"
+  alias vim="nvim"
+fi
