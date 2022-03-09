@@ -15,7 +15,7 @@ git submodule update --init --recursive
 ### symlinking individual configs
 
 ```bash
-stows zsh
+stow zsh
 ```
 
 ### symlinking multiple configs
