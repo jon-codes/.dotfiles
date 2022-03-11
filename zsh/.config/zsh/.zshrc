@@ -59,6 +59,10 @@ else
     alias ls="ls -av --group-directories-first --color=auto"
 fi
 
+if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+    alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
+fi
+
 # vim/nvim
 alias vi="vim"
 
