@@ -52,6 +52,11 @@ source $ZDOTDIR/zsh-completions/zsh-completions.plugin.zsh
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
+source $ZDOTDIR/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 # aliases
 if [[ `uname` == "Darwin" ]]; then
     alias ls="ls -av --color=auto"

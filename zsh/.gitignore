@@ -6,6 +6,7 @@
 !.config/zsh/zsh-autosuggestions
 !.config/zsh/zsh-completions
 !.config/zsh/zsh-syntax-highlighting
+!.config/zsh/zsh-history-substring-search
 !.config/zsh/zsh-defer
 
 !*/
