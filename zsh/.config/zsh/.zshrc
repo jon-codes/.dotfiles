@@ -1,7 +1,7 @@
 autoload -Uz colors && colors
 autoload -Uz add-zsh-hook
 
-# add xdg local bin to path
+# ensure xdg local bin is in path
 path+=("$HOME/.local/bin")
 
 # history
@@ -56,7 +56,6 @@ source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 source $ZDOTDIR/zsh-history-substring-search/zsh-history-substring-search.zsh
-
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
@@ -67,9 +66,10 @@ else
     alias ls="ls -av --group-directories-first --color=auto"
 fi
 
-#if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
-#    alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
-#fi
+# vscode wayland fix
+# if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+#   alias codium="codium --enable-features=UseOzonePlatform --ozone-platform=wayland"
+# fi
 
 # vim/nvim
 alias vi="vim"

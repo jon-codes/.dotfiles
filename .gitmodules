@@ -1,15 +1,15 @@
-[submodule "zsh/.config/zsh/zsh-defer"]
+[submodule "zsh-defer"]
 	path = zsh/.config/zsh/zsh-defer
 	url = https://github.com/romkatv/zsh-defer
-[submodule "zsh/.config/zsh/zsh-autosuggestions"]
+[submodule "zsh-autosuggestions"]
 	path = zsh/.config/zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "zsh/.config/zsh/zsh-completions"]
+[submodule "zsh-completions"]
 	path = zsh/.config/zsh/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
-[submodule "zsh/.config/zsh/zsh-syntax-highlighting"]
+[submodule "zsh-syntax-highlighting"]
 	path = zsh/.config/zsh/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
-[submodule "zsh/.config/zsh/zsh-history-substring-search"]
+[submodule "zsh-history-substring-search"]
 	path = zsh/.config/zsh/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search.git
