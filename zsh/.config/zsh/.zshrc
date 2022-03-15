@@ -1,6 +1,9 @@
 autoload -Uz colors && colors
 autoload -Uz add-zsh-hook
 
+# add xdg local bin to path
+path+=("$HOME/.local/bin")
+
 # history
 HISTFILE=$ZDOTDIR/.zhistory
 HISTSIZE=10000
@@ -64,14 +67,18 @@ else
     alias ls="ls -av --group-directories-first --color=auto"
 fi
 
-if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
-    alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
-fi
+#if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+#    alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
+#fi
 
 # vim/nvim
 alias vi="vim"
 
-if type "$nvim" > /dev/null; then
-  echo "NOT INSTALLED"
+if type nvim &>/dev/null; then
   alias vim="nvim"
+fi
+
+# fnm setup
+if type fnm &>/dev/null; then
+  eval "$(fnm env --use-on-cd)"
 fi
