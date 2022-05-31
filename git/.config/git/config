@@ -3,7 +3,9 @@
 [core]
     excludesFile = ~/.config/ignore
 [init]
-    defaultBranch = main
+    defaultBranch = main</LocationProvider>
+[pull]
+    rebase = true
 [user]
     name = Jon Webb
     email = jon@jonwebb.dev
