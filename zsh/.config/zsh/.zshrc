@@ -77,3 +77,8 @@ fi
 if type fnm &>/dev/null; then
   eval "$(fnm env --use-on-cd)"
 fi
+
+# go setup
+if type go &>/dev/null; then
+  path+=("$HOME/usr/local/go/bin")
+fi

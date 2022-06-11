@@ -2,6 +2,8 @@
     gpgsign = true
 [core]
     excludesFile = ~/.config/ignore
+[credential]
+	helper = cache
 [init]
     defaultBranch = main</LocationProvider>
 [pull]
