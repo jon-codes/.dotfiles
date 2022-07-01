@@ -10,3 +10,6 @@ export BROWSER="firefox"
 
 # zsh
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
+
+# kde
+export SSH_ASKPASS=/usr/bin/ksshaskpass

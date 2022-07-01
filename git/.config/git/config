@@ -5,10 +5,15 @@
 [credential]
 	helper = cache
 [init]
-    defaultBranch = main</LocationProvider>
+    defaultBranch = main
 [pull]
     rebase = true
 [user]
     name = Jon Webb
     email = jon@jonwebb.dev
     signingkey = C85CE90BBEBA6406
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
